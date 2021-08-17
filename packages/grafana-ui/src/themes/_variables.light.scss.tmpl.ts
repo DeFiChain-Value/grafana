@@ -102,8 +102,8 @@ $text-blue: ${theme.v1.colors.textBlue};
 $text-shadow-faint: none;
 
 // gradients
-$brand-gradient-horizontal: linear-gradient(to right, #f05a28 30%, #fbca0a 99%);
-$brand-gradient-vertical: linear-gradient(#f05a28 30%, #fbca0a 99%);
+$brand-gradient-horizontal: linear-gradient(to right, #1f60c4 30%, #08a592 99%);
+$brand-gradient-vertical: linear-gradient(#1f60c4 30%, #08a592 99%);
 
 // Links
 // -------------------------
@@ -125,7 +125,7 @@ $hr-border-color: $gray-4 !default;
 $panel-bg: ${theme.components.panel.background};
 $panel-border: 1px solid ${theme.components.panel.borderColor};
 $panel-header-hover-bg: ${theme.colors.action.hover};
-$panel-box-shadow: ${theme.components.panel.boxShadow};
+$panel-box-shadow: 0 0 2px;
 $panel-corner: $panel-bg;
 
 // Page header

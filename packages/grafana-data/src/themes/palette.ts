@@ -3,7 +3,7 @@ export const palette = {
   black: '#000',
 
   gray25: '#2c3235',
-  gray15: '#22252b', //'#202226',
+  gray15: '#29303c', //'#202226',
   gray10: '#181b1f', // old '#141619',
   gray05: '#111217', // old '#0b0c0e',
 

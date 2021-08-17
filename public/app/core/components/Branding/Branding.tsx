@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { css, cx } from '@emotion/css';
-import { useTheme2, styleMixins } from '@grafana/ui';
+import { useTheme2 } from '@grafana/ui';
 import { colorManipulator } from '@grafana/data';
 
 export interface BrandComponentProps {
@@ -9,7 +9,7 @@ export interface BrandComponentProps {
 }
 
 const LoginLogo: FC<BrandComponentProps> = ({ className }) => {
-  return <img className={className} src="public/img/grafana_icon.svg" alt="Grafana" />;
+  return <img className={className} src="public/img/grafana_icon.png" alt="DeFiChain Value" />;
 };
 
 const LoginBackground: FC<BrandComponentProps> = ({ className, children }) => {
@@ -24,17 +24,9 @@ const LoginBackground: FC<BrandComponentProps> = ({ className, children }) => {
       bottom: 0;
       top: 0;
       background: url(public/img/g8_login_${theme.isDark ? 'dark' : 'light'}.svg);
-      background-position: top center;
-      background-size: auto;
-      background-repeat: no-repeat;
-
+      background-size: cover;
       opacity: 0;
       transition: opacity 3s ease-in-out;
-
-      @media ${styleMixins.mediaUp(theme.v1.breakpoints.md)} {
-        background-position: center;
-        background-size: cover;
-      }
     }
   `;
 
@@ -42,7 +34,7 @@ const LoginBackground: FC<BrandComponentProps> = ({ className, children }) => {
 };
 
 const MenuLogo: FC<BrandComponentProps> = ({ className }) => {
-  return <img className={className} src="public/img/grafana_icon.svg" alt="Grafana" />;
+  return <img className={className} src="public/img/grafana_icon.png" alt="DeFiChain Value" />;
 };
 
 const LoginBoxBackground = () => {
@@ -58,8 +50,8 @@ export class Branding {
   static LoginBackground = LoginBackground;
   static MenuLogo = MenuLogo;
   static LoginBoxBackground = LoginBoxBackground;
-  static AppTitle = 'Grafana';
-  static LoginTitle = 'Welcome to Grafana';
+  static AppTitle = 'DeFiChain Value';
+  static LoginTitle = 'Welcome to DeFiChain Value';
   static GetLoginSubTitle = (): null | string => {
     return null;
   };

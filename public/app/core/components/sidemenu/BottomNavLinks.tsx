@@ -9,6 +9,8 @@ import { getFooterLinks } from '../Footer/Footer';
 import { ShowModalReactEvent } from '../../../types/events';
 import { HelpModal } from '../help/HelpModal';
 
+let Version = 'DeFiChain Value 1.0';
+
 export interface Props {
   link: NavModelItem;
   user: User;
@@ -57,7 +59,7 @@ export default class BottomNavLinks extends PureComponent<Props, State> {
         <ul className="dropdown-menu dropdown-menu--sidemenu" role="menu">
           {link.subTitle && (
             <li className="sidemenu-subtitle">
-              <span className="sidemenu-item-text">{link.subTitle}</span>
+              <span className="sidemenu-item-text">{Version}</span>
             </li>
           )}
           {link.showOrgSwitcher && (

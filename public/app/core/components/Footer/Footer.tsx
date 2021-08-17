@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-import config from 'app/core/config';
 import { Icon, IconName } from '@grafana/ui';
 
 export interface FooterLink {
@@ -12,47 +11,41 @@ export interface FooterLink {
 export let getFooterLinks = (): FooterLink[] => {
   return [
     {
-      text: 'Documentation',
-      icon: 'document-info',
-      url: 'https://grafana.com/docs/grafana/latest/?utm_source=grafana_footer',
+      text: 'DeFiChain',
+      icon: 'exchange-alt',
+      url: 'https://defichain.com',
+      target: '_blank',
+    },
+
+    {
+      text: 'DeFiChain Wiki',
+      icon: 'book-open',
+      url: 'https://defichain-wiki.com',
       target: '_blank',
     },
     {
-      text: 'Support',
-      icon: 'question-circle',
-      url: 'https://grafana.com/products/enterprise/?utm_source=grafana_footer',
+      text: 'DeFiChain Analytics',
+      icon: 'database',
+      url: 'https://defichain-analytics.com',
       target: '_blank',
     },
     {
-      text: 'Community',
+      text: 'DefiChain Promo',
       icon: 'comments-alt',
-      url: 'https://community.grafana.com/?utm_source=grafana_footer',
+      url: 'https://www.defichain-promo.com',
       target: '_blank',
     },
   ];
 };
 
 export let getVersionLinks = (): FooterLink[] => {
-  const { buildInfo, licenseInfo } = config;
   const links: FooterLink[] = [];
-  const stateInfo = licenseInfo.stateInfo ? ` (${licenseInfo.stateInfo})` : '';
 
-  links.push({ text: `${buildInfo.edition}${stateInfo}`, url: licenseInfo.licenseUrl });
-
-  if (buildInfo.hideVersion) {
-    return links;
-  }
-
-  links.push({ text: `v${buildInfo.version} (${buildInfo.commit})` });
-
-  if (buildInfo.hasUpdate) {
-    links.push({
-      text: `New version available!`,
-      icon: 'download-alt',
-      url: 'https://grafana.com/grafana/download?utm_source=grafana_footer',
-      target: '_blank',
-    });
-  }
+  //links.push({ text: `${buildInfo.edition}${stateInfo}`, url: licenseInfo.licenseUrl });
+  links.push({
+    text: `DefiChain Explained`,
+    url: 'https://www.defichain-explained.com',
+  });
 
   return links;
 };
