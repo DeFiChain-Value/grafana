@@ -90,14 +90,6 @@ export default class BottomNavLinks extends PureComponent<Props, State> {
             );
           })}
 
-          {link.id === 'help' && (
-            <li key="keyboard-shortcuts">
-              <a onClick={() => this.onOpenShortcuts()}>
-                <Icon name="keyboard" className={subMenuIconClassName} /> Keyboard shortcuts
-              </a>
-            </li>
-          )}
-
           <li className="side-menu-header">
             <span className="sidemenu-item-text">{link.text}</span>
           </li>
