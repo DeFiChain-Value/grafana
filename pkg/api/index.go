@@ -233,16 +233,6 @@ func (hs *HTTPServer) getNavTree(c *models.ReqContext, hasEditPerm bool) ([]*dto
 				Icon: "cog",
 			})
 		}
-
-		navTree = append(navTree, &dtos.NavLink{
-			Text:       "Alerting",
-			SubTitle:   "Alert rules and notifications",
-			Id:         "alerting",
-			Icon:       "bell",
-			Url:        hs.Cfg.AppSubURL + "/alerting/list",
-			Children:   alertChildNavs,
-			SortWeight: dtos.WeightAlerting,
-		})
 	}
 
 	appLinks, err := hs.getAppLinks(c)

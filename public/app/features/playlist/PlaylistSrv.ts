@@ -14,15 +14,15 @@ export const queryParamsToPreserve: { [key: string]: boolean } = {
 
 export class PlaylistSrv {
   private nextTimeoutId: any;
-  private declare dashboards: Array<{ url: string }>;
-  private index = 0;
-  private declare interval: number;
-  private declare startUrl: string;
+  private dashboards: Array<{ url: string }>;
+  private index: number;
+  private interval: number;
+  private startUrl: string;
   private numberOfLoops = 0;
-  private declare validPlaylistUrl: string;
+  private validPlaylistUrl: string;
   private locationListenerUnsub?: () => void;
 
-  isPlaying = false;
+  isPlaying: boolean;
 
   constructor() {
     this.locationUpdated = this.locationUpdated.bind(this);

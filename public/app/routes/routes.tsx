@@ -474,30 +474,6 @@ export function getAppRoutes(): RouteDescriptor[] {
       ),
     },
     {
-      path: '/playlists',
-      component: SafeDynamicImport(
-        () => import(/* webpackChunkName: "PlaylistPage"*/ 'app/features/playlist/PlaylistPage')
-      ),
-    },
-    {
-      path: '/playlists/play/:id',
-      component: SafeDynamicImport(
-        () => import(/* webpackChunkName: "PlaylistStartPage"*/ 'app/features/playlist/PlaylistStartPage')
-      ),
-    },
-    {
-      path: '/playlists/new',
-      component: SafeDynamicImport(
-        () => import(/* webpackChunkName: "PlaylistNewPage"*/ 'app/features/playlist/PlaylistNewPage')
-      ),
-    },
-    {
-      path: '/playlists/edit/:id',
-      component: SafeDynamicImport(
-        () => import(/* webpackChunkName: "PlaylistEditPage"*/ 'app/features/playlist/PlaylistEditPage')
-      ),
-    },
-    {
       path: '/sandbox/benchmarks',
       component: SafeDynamicImport(
         () => import(/* webpackChunkName: "BenchmarksPage"*/ 'app/features/sandbox/BenchmarksPage')
