@@ -116,19 +116,14 @@ func (c *EvalContext) GetDashboardUID() (*models.DashboardRef, error) {
 	return c.dashboardRef, nil
 }
 
-const urlFormat = "%s?tab=alert&viewPanel=%d&orgId=%d"
+const urlFormat = "https://defichain-value.com/d/ZVMca5n7z/arbitrage-calculator?orgId=1"
 
 // GetRuleURL returns the url to the dashboard containing the alert.
 func (c *EvalContext) GetRuleURL() (string, error) {
 	if c.IsTestRun {
 		return setting.AppUrl, nil
 	}
-
-	ref, err := c.GetDashboardUID()
-	if err != nil {
-		return "", err
-	}
-	return fmt.Sprintf(urlFormat, models.GetFullDashboardUrl(ref.Uid, ref.Slug), c.Rule.PanelID, c.Rule.OrgID), nil
+	return fmt.Sprintf(urlFormat), nil
 }
 
 // GetNewState returns the new state from the alert rule evaluation.
@@ -245,3 +240,4 @@ func buildTemplateDataMap(evalMatches []*EvalMatch) (map[string]string, error) {
 	}
 	return result, nil
 }
+

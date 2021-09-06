@@ -1,12 +1,13 @@
 package notifiers
 
+
 import (
 	"bytes"
 	"fmt"
 	"io"
 	"mime/multipart"
 	"os"
-
+	"strings"
 	"github.com/grafana/grafana/pkg/bus"
 	"github.com/grafana/grafana/pkg/infra/log"
 	"github.com/grafana/grafana/pkg/models"
@@ -20,6 +21,9 @@ const (
 var (
 	telegramAPIURL = "https://api.telegram.org/bot%s/%s"
 )
+
+
+
 
 func init() {
 	alerting.RegisterNotifier(&alerting.NotifierPlugin{
@@ -101,11 +105,11 @@ func (tn *TelegramNotifier) buildMessage(evalContext *alerting.EvalContext, send
 }
 
 func (tn *TelegramNotifier) buildMessageLinkedImage(evalContext *alerting.EvalContext) (*models.SendWebhookSync, error) {
-	message := fmt.Sprintf("<b>%s</b>\nState: %s\nMessage: %s\n", evalContext.GetNotificationTitle(), evalContext.Rule.Name, evalContext.Rule.Message)
+	message := fmt.Sprintf("<b>%s</b>\n \n %s\n", evalContext.GetNotificationTitle(), evalContext.Rule.Message)
 
 	ruleURL, err := evalContext.GetRuleURL()
 	if err == nil {
-		message += fmt.Sprintf("URL: %s\n", ruleURL)
+		message += fmt.Sprintf("%s\n", ruleURL)
 	}
 
 	if evalContext.ImagePublicURL != "" {
@@ -114,7 +118,8 @@ func (tn *TelegramNotifier) buildMessageLinkedImage(evalContext *alerting.EvalCo
 
 	metrics := generateMetricsMessage(evalContext)
 	if metrics != "" {
-		message += fmt.Sprintf("\n<i>Metrics:</i>%s", metrics)
+		
+		message += fmt.Sprintf(metrics)
 	}
 
 	return tn.generateTelegramCmd(message, "text", "sendMessage", func(w *multipart.Writer) {
@@ -216,7 +221,12 @@ func generateMetricsMessage(evalContext *alerting.EvalContext) string {
 	metrics := ""
 	fieldLimitCount := 4
 	for index, evt := range evalContext.EvalMatches {
-		metrics += fmt.Sprintf("\n%s: %s", evt.Metric, evt.Value)
+		if index == 2 {
+			metrics += fmt.Sprintf("\n%s: <b>%s</b> $", evt.Metric, evt.Value)
+				} else	{
+				split := strings.SplitN(evt.Metric,",",3)		
+				metrics += fmt.Sprintf("\n <b>%s:</b> \n %s | %s: <b>%s</b> $ \n", split[0],split[1],split[2], evt.Value)
+			}
 		if index > fieldLimitCount {
 			break
 		}

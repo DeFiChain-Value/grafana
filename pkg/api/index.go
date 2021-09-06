@@ -233,6 +233,7 @@ func (hs *HTTPServer) getNavTree(c *models.ReqContext, hasEditPerm bool) ([]*dto
 				Icon: "cog",
 			})
 		}
+
 	}
 
 	appLinks, err := hs.getAppLinks(c)

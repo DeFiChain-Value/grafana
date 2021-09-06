@@ -1,0 +1,239 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "id": 6,
+  "links": [
+    {
+      "asDropdown": false,
+      "icon": "external link",
+      "includeVars": false,
+      "keepTime": false,
+      "tags": [
+        "public"
+      ],
+      "targetBlank": false,
+      "title": "Dashboards",
+      "tooltip": "",
+      "type": "dashboards",
+      "url": ""
+    }
+  ],
+  "panels": [
+    {
+      "datasource": null,
+      "gridPos": {
+        "h": 13,
+        "w": 20,
+        "x": 0,
+        "y": 0
+      },
+      "id": 10,
+      "options": {
+        "content": "<img src=\"public/img/Banner.png\" alt=\"Banner\" width=\"100%\" height=\"max-height\">",
+        "mode": "html"
+      },
+      "pluginVersion": "8.1.1",
+      "type": "text"
+    },
+    {
+      "datasource": null,
+      "gridPos": {
+        "h": 17,
+        "w": 4,
+        "x": 20,
+        "y": 0
+      },
+      "id": 23,
+      "options": {
+        "folderId": null,
+        "maxItems": 10,
+        "query": "",
+        "showHeadings": false,
+        "showRecentlyViewed": false,
+        "showSearch": true,
+        "showStarred": true,
+        "tags": []
+      },
+      "pluginVersion": "8.1.1",
+      "title": "Dashboards",
+      "type": "dashlist"
+    },
+    {
+      "datasource": null,
+      "gridPos": {
+        "h": 8,
+        "w": 14,
+        "x": 0,
+        "y": 13
+      },
+      "id": 27,
+      "options": {
+        "content": "<p align = \"center\";>\n  <h style =\"font-size:40px;color: rgb(46, 178, 218);\"\">About</h>\n  <p style =\"font-size:20px\"; align = \"left\">Decentralizing finance leads to information accessable for everyone. Collecting data, sorting, analyzing, and interpreting generates knowledge. Excess knowledge enables our community to have an advantage over other market participants.\nDefichain Value makes use of traditional finance theory, data analysis and interactive software to provide all the information you need.\n\nDecentral finance is all about substituting financial services. Knowledge that was gathered in the last 150 years of finance should not be forgotten; it should be used to our advantage. You do not know much about finance? Don t you worry we will learn it together! </font>\n           </p>\n</p>",
+        "mode": "html"
+      },
+      "pluginVersion": "8.1.1",
+      "type": "text"
+    },
+    {
+      "datasource": null,
+      "gridPos": {
+        "h": 4,
+        "w": 2,
+        "x": 14,
+        "y": 13
+      },
+      "id": 29,
+      "options": {
+        "content": "<a href=\"https://twitter.com/DefichainV\" target=\"_blank\"><img src=\"public/img/twitter.png\"></a>\n         \n",
+        "mode": "html"
+      },
+      "pluginVersion": "8.1.1",
+      "type": "text"
+    },
+    {
+      "datasource": null,
+      "gridPos": {
+        "h": 4,
+        "w": 2,
+        "x": 16,
+        "y": 13
+      },
+      "id": 31,
+      "options": {
+        "content": "<a href=\"https://www.youtube.com/channel/UCELK-sHFshn2yqc2yuZ3Tig\" target=\"_blank\"><img src=\"public/img/youtube.png\"></a>\n         \n",
+        "mode": "html"
+      },
+      "pluginVersion": "8.1.1",
+      "type": "text"
+    },
+    {
+      "datasource": null,
+      "gridPos": {
+        "h": 4,
+        "w": 2,
+        "x": 18,
+        "y": 13
+      },
+      "id": 33,
+      "options": {
+        "content": "<a href=\"https://www.reddit.com/r/defiblockchain/\" target=\"_blank\"><img src=\"public/img/reddit.png\"></a>\n         \n",
+        "mode": "html"
+      },
+      "pluginVersion": "8.1.1",
+      "type": "text"
+    },
+    {
+      "datasource": null,
+      "gridPos": {
+        "h": 4,
+        "w": 2,
+        "x": 14,
+        "y": 17
+      },
+      "id": 32,
+      "options": {
+        "content": "<a href=\"https://t.me/joinchat/VX1xKqD739JhZThi\" target=\"_blank\"><img src=\"public/img/telegram.png\"></a>\n         \n",
+        "mode": "html"
+      },
+      "pluginVersion": "8.1.1",
+      "type": "text"
+    },
+    {
+      "datasource": null,
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 16,
+        "y": 17
+      },
+      "id": 35,
+      "options": {
+        "content": "<p align = \"center\";>\r\n  <h style =\"font-size:40px;color: rgb(46, 178, 218);\"\">Telegram</h>\r\n  <p style =\"font-size:20px\"; align = \"center\">Invite-Link for the Alertbot</p>\r\n</p>\r\n",
+        "mode": "html"
+      },
+      "pluginVersion": "8.1.1",
+      "type": "text"
+    },
+    {
+      "datasource": null,
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 20,
+        "y": 17
+      },
+      "id": 21,
+      "options": {
+        "content": "<p align = \"center\";>\r\n  <h style =\"color: rgb(46, 178, 218);\"\">Support Us</h>\r\n  <p align = \"center\">If you want to support us with DFI:</p>\r\n  <p align = \"center\". style=\"font-size:10px\">df1q7p28thruvj8ch7stwd2xcwjpsltdwtu0cn28lm</p>\r\n  <p align = \"center\">Thank You!</p>\r\n</p>",
+        "mode": "markdown"
+      },
+      "pluginVersion": "8.1.1",
+      "type": "text"
+    }
+  ],
+  "refresh": "",
+  "schemaVersion": 30,
+  "style": "dark",
+  "tags": [
+    "01 - Home",
+    "public"
+  ],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {
+    "hidden": true,
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ],
+    "time_options": [
+      "5m",
+      "15m",
+      "1h",
+      "6h",
+      "12h",
+      "24h",
+      "2d",
+      "7d",
+      "30d"
+    ],
+    "type": "timepicker"
+  },
+  "timezone": "browser",
+  "title": "01 - Home",
+  "uid": "VrRZTZ3Mz",
+  "version": 62
+}
